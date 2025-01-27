@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <h2>Employee Management System</h2>
+
+    <div class="buttons">
+        <button onclick="showForm()">Register Employee</button>
+        <button onclick="showTable()">View Employees</button>
+        <button class="logout-button" onclick="logout()">Logout</button>
+    </div>
+
+    <!-- Registration Form -->
+    <div id="formContainer">
+        <h3>Register New Employee</h3>
+        <form id="employeeForm">
+            <input type="text" id="name" placeholder="Full Name" required>
+            <input type="text" id="department" placeholder="Department" required>
+            <input type="number" id="salary" placeholder="Salary" required>
+            <input type="number" id="age" placeholder="Age" required>
+            <input type="text" id="address" placeholder="Address" required>
+            <input type="text" id="designation" placeholder="Designation" required>
+            <input type="number" id="experience" placeholder="Experience (Years)" required>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <!-- Employee Table -->
+    <div id="tableContainer" style="display: none;">
+        <h3>Employee List</h3>
+        <table id="employeeTable">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Department</th>
+                <th class="highlight">Salary</th>
+                <th>Age</th>
+                <th>Address</th>
+                <th>Designation</th>
+                <th class="highlight">Experience</th>
+                <th>Action</th>
+            </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
