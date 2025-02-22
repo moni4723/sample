@@ -1,9 +1,12 @@
 package com.eg.sample.repository;
 
-import com.eg.sample.entity.AppUser;  // ✅ Update import
+import com.eg.sample.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
 import java.util.Optional;
 
-public interface UserRepository extends JpaRepository<AppUser, Long> {  // ✅ Use AppUser instead of User
-    Optional<AppUser> findByUsername(String username);
+@Repository
+public interface UserRepository extends JpaRepository<User, Long> {
+    Optional<User> findByUsername(String username);
 }
