@@ -1,28 +1,24 @@
 package com.eg.sample.entity;
 
-
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
-@Setter
 @Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name = "employee")
 public class Employee {
-
-    // Getters and Setters
     @Id
-    //@GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false)
     private String name;
-
-    @Column(nullable = false)
     private String department;
-
-    @Column(name = "salary", nullable = true)
     private Double salary;
-
+    private Integer age;
+    private String address;
+    private String designation;
+    private Integer experience;
 }
